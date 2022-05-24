@@ -4,8 +4,9 @@ import { Card, Box } from "@dracula/dracula-ui";
 
 export default function News({ color, about, language }) {
   const [news, setNews] = useState([]);
+  console.log(process.env.REACT_APP_API_KEY);
   useEffect(() => {
-    const url = `https://newsapi.org/v2/everything?q=${about}&language=${language}&sortBy=publishedAt&apiKey=${REACT_APP_API_KEY}`;
+    const url = `https://newsapi.org/v2/everything?q=${about}&language=${language}&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`;
 
     fetch(url)
       .then((response) => {
