@@ -8,6 +8,8 @@ function App() {
   const [about, setAbout] = useState("Anime");
   const [language, setLanguage] = useState("en");
 
+  console.log(process.env);
+
   const colors = ["cyan", "green", "orange", "pink", "purple", "red", "yellow"];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
